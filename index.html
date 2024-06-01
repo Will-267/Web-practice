@@ -84,6 +84,37 @@
             color: #000000;
         }
 
+        .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* This ensures responsiveness on smaller screens */
+    gap: 20px; /* Optional: Add space between image and text */
+}
+
+.profile-picture {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.about-text {
+    max-width: 600px;
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+}
+
         .container {
             width: 80%;
             margin: auto;
