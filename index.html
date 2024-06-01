@@ -23,7 +23,7 @@
     <section id="about" class="section">
         <div class="container">
             <h2>About Me</h2>
-             <img src="me.jpg" alt="Your Name" class="profile-picture hover effect">
+            <img src="me.jpg" alt="Your Name" class="profile-picture hover-effect">
             <p>
                 Hello! I am Eleazar William, a photographer with a passion for capturing beautiful moments.  
                 Below are some of my recent projects.
@@ -31,28 +31,45 @@
         </div>
     </section>
 
- <section id="projects" class="section">
-    <div class="container">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Sabon Kaura Experience</h3>
-            <img src="1.jpg" alt="Project 1" class="project-image hover-effect">
-            
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Sabon Kaura Experience</h3>
+                <img src="1.jpg" alt="Sabon Kaura Experience" class="project-image hover-effect" onclick="showGallery('sabon-kaura')">
+                <div id="sabon-kaura" class="gallery">
+                    <img src="1.jpg" alt="Image 1">
+                    <img src="2.jpg" alt="Image 2">
+                    <img src="3.jpg" alt="Image 3">
+                </div>
+            </div>
         </div>
-        
-   
-</section>
+    </section>
 
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact</h2>
             <p>If you'd like to get in touch, please email me at <a href="mailto:your.williameleazar51@gmail.com">williameleazar51@gmail.com</a>.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com/yourprofile" target="_blank" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Eleazar Wiliam. All rights reserved.</p>
+            <p>&copy; 2024 Eleazar William. All rights reserved.</p>
         </div>
     </footer>
 
@@ -116,18 +133,51 @@
             color: #333;
         }
 
-         .profile-picture, .project-image {
+        .profile-picture, .project-image {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            height: auto;
+            max-width: 300px;
         }
 
-           .hover-effect:hover {
+        .hover-effect:hover {
             transform: scale(1.1);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
         .project {
             margin-bottom: 20px;
         }
 
-       
+        .gallery {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            margin: 5px 0;
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #333;
+            font-size: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-media a:hover {
+            transform: scale(1.1);
+            color: #007bff; /* Change this color to whatever you prefer */
+        }
 
         footer {
             background: #333;
@@ -137,5 +187,19 @@
             margin-top: 20px;
         }
     </style>
+
+    <script>
+        function showGallery(galleryId) {
+            const gallery = document.getElementById(galleryId);
+            if (gallery.style.display === "block") {
+                gallery.style.display = "none";
+            } else {
+                gallery.style.display = "block";
+            }
+        }
+    </script>
+
+    <!-- Font Awesome for social media icons (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>
