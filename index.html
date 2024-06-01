@@ -20,18 +20,18 @@
         </div>
     </header>
 
-  <section id="about" class="section">
-    <div class="container about-container">
-        <img src="me.jpg" alt="Your Name" class="profile-picture hover-effect">
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p>
-                Hello! I am Eleazar William, a photographer with a passion for capturing beautiful moments.  
-                Below are some of my recent projects.
-            </p>
+    <section id="about" class="section">
+        <div class="container about-container">
+            <img src="me.jpg" alt="Your Name" class="profile-picture hover-effect">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    Hello! I am Eleazar William, a photographer with a passion for capturing beautiful moments.  
+                    Below are some of my recent projects.
+                </p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="projects" class="section">
         <div class="container">
@@ -40,9 +40,9 @@
                 <h3>Sabon Kaura Experience</h3>
                 <img src="1.jpg" alt="Sabon Kaura Experience" class="project-image hover-effect" onclick="showGallery('sabon-kaura')">
                 <div id="sabon-kaura" class="gallery">
-                    <img src="3.jpg" alt="Image 1">
+                    <img src="4.jpg" alt="Image 1">
                     <img src="2.jpg" alt="Image 2">
-                    <img src="4.jpg" alt="Image 3">
+                    <img src="3.jpg" alt="Image 3">
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact</h2>
-            <p>If you'd like to get in touch, please email me at <a href="mailto:your.williameleazar51@gmail.com">williameleazar51@gmail.com</a>.</p>
+            <p>If you'd like to get in touch, please email me at <a href="mailto:williameleazar51@gmail.com">williameleazar51@gmail.com</a>.</p>
             <div class="social-media">
                 <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-icon">
                     <i class="fab fa-facebook-f"></i>
@@ -83,37 +83,6 @@
             padding: 0;
             color: #000000;
         }
-
-        .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; /* This ensures responsiveness on smaller screens */
-    gap: 20px; /* Optional: Add space between image and text */
-}
-
-.profile-picture {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    flex-shrink: 0;
-}
-
-.about-text {
-    max-width: 600px;
-    flex-grow: 1;
-}
-
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        max-width: 100%;
-    }
-}
 
         .container {
             width: 80%;
@@ -166,11 +135,39 @@
             color: #333;
         }
 
-        .profile-picture, .project-image {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+            gap: 20px; /* Optional: Add space between image and text */
+        }
+
+        .profile-picture {
+            max-width: 300px;
             width: 100%;
             height: auto;
-            max-width: 300px;
+            flex-shrink: 0;
+        }
+
+        .about-text {
+            max-width: 600px;
+            flex-grow: 1;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text {
+                max-width: 100%;
+            }
+        }
+
+        .profile-picture, .project-image {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .hover-effect:hover {
