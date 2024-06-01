@@ -23,7 +23,7 @@
     <section id="about" class="section">
         <div class="container">
             <h2>About Me</h2>
-             <img src="me.jpg" alt="Your Name" class="profile-picture">
+             <img src="me.jpg" alt="Your Name" class="profile-picture hover effect">
             <p>
                 Hello! I am Eleazar William, a photographer with a passion for capturing beautiful moments.  
                 Below are some of my recent projects.
@@ -36,17 +36,17 @@
         <h2>Projects</h2>
         <div class="project">
             <h3>Project 1</h3>
-            <img src="1.jpg" alt="Project 1" class="project-image">
+            <img src="1.jpg" alt="Project 1" class="project-image hover-effect">
             <p>Description of project 1.</p>
         </div>
         <div class="project">
             <h3>Project 2</h3>
-            <img src="2.jpg" alt="Project 2" class="project-image">
+            <img src="2.jpg" alt="Project 2" class="project-image hover effect">
             <p>Description of project 2.</p>
         </div>
         <div class="project">
             <h3>Project 3</h3>
-            <img src="3.jpg" alt="Project 3" class="project-image">
+            <img src="3.jpg" alt="Project 3" class="project-image hover effect">
             <p>Description of project 3.</p>
         </div>
     </div>
@@ -125,21 +125,13 @@
             color: #333;
         }
 
-       .profile-picture {
-            display: block;
-            margin: 0 auto 20px;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+         .profile-picture, .project-image {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .project-image {
-            display: block;
-            margin: 10px 0;
-            max-width: 100%;
-            height: auto;
-        }
-
+           .hover-effect:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         .project {
             margin-bottom: 20px;
         }
